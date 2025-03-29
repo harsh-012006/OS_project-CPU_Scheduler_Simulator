@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent CPU Scheduler Simulator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Intelligent CPU Scheduler Simulator</h2>
+
+        <div class="form-group">
+            <label for="processes">Enter Processes (comma-separated):</label>
+            <input type="text" class="form-control" id="processes" placeholder="e.g., P1,P2,P3">
+        </div>
+
+        <div class="form-group">
+            <label for="arrivalTimes">Enter Arrival Times (comma-separated):</label>
+            <input type="text" class="form-control" id="arrivalTimes" placeholder="e.g., 0,2,4">
+        </div>
+
+        <div class="form-group">
+            <label for="burstTimes">Enter Burst Times (comma-separated):</label>
+            <input type="text" class="form-control" id="burstTimes" placeholder="e.g., 5,3,6">
+        </div>
+
+        <div class="form-group">
+            <label for="algorithm">Select Scheduling Algorithm:</label>
+            <select class="form-control" id="algorithm">
+                <option value="fcfs">First-Come, First-Served (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="priority">Priority Scheduling</option>
+                <option value="roundrobin">Round Robin</option>
+                </select>
+        </div>
+
+        <button class="btn btn-primary btn-block" onclick="simulate()">Simulate</button>
+
+        <div class="results" id="results" style="display: none;">
+            <h3>Results:</h3>
+            <p id="waitingTime"></p>
+            <p id="turnaroundTime"></p>
+            <p id="ganttChart"></p>
+        </div>
+    </div>
+
+    <script src="osjscode.js"> 
+       
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
